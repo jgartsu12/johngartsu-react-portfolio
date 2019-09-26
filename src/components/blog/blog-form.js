@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import RichTextEditor from "../forms/rich-text-editor";
+
 export default class BlogForm extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +28,7 @@ export default class BlogForm extends Component {
   handleSubmit(event) {
     axios
       .post(
-        "https://johncgartsu.devcamp.space/portfolio/portfolio_blogs",
+        "https://jordan.devcamp.space/portfolio/portfolio_blogs",
         this.buildForm(),
         { withCredentials: true }
       )
@@ -72,6 +74,10 @@ export default class BlogForm extends Component {
             placeholder="Blog status"
             value={this.state.blog_status}
           />
+        </div>
+
+        <div className="one-column">
+          <RichTextEditor />
         </div>
 
         <button className="btn">Save</button>
