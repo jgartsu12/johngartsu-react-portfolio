@@ -37,7 +37,7 @@ export default class BlogForm extends Component {
   handleSubmit(event) {
     axios
       .post(
-        "https://jordan.devcamp.space/portfolio/portfolio_blogs",
+        "https://johncgartsu.devcamp.space/portfolio/portfolio_blogs",
         this.buildForm(),
         { withCredentials: true }
       )
